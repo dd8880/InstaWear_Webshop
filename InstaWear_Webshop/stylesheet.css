@@ -1,0 +1,201 @@
+*{
+  box-sizing: border-box;
+}
+
+
+    /*Style stickynote*/
+
+    #stickynote {
+        overflow: hidden;
+        background-color:black;
+        color: aqua;
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        padding:10px;
+        width: 100%;
+        display: block;
+    }
+
+    .youprofile {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .youprofile img {
+        margin-top: 1rem;
+        margin-right: .5rem;
+        width: 30px;
+        height: 30px;
+    }
+
+    .globalNav {
+        display: flex;
+        justify-content: space-between;
+    }
+    .gNav  {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-right: 5rem;
+    }
+    .globalNav ul li a {
+        text-decoration: none;
+        font-size: 1.8rem;
+        color:purple;
+        
+    }
+    .globalNav ul {
+        list-style-type: none;
+    }
+
+    .nav ul {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        justify-content: space-around;
+    }
+    .nav {
+        display: flex;
+        font-size: 1.2rem;
+    }
+    
+    .nav li a{
+        color: black;
+        text-decoration-color: darkgray;
+    }
+    .nav li a:hover {
+        text-decoration-color: black;
+        background-color: blueviolet;
+        padding: 1.2rem;
+    }
+
+    .logo {
+        font-size: 50px;
+        margin-left: -4rem;
+        padding: 40px;
+    }
+
+    
+
+    /*Category*/
+    .letterLinks ol {
+      margin-top: 1rem;
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 1.4rem;
+    }
+
+    .letterLinks a, 
+    .brandList h2 {
+      text-transform: uppercase;
+    }
+
+    .brandList ol {
+      list-style-type: none;
+    }
+
+    .brandList li {
+      border-bottom: 1px solid #d8d8d8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .brandList a {
+      text-decoration: none;
+      display: block;
+      width: 100%;
+    }
+
+
+
+    
+
+      .smallProduct{
+          margin-left: 1.5rem;
+          margin-right: 1.5rem;
+          display: flex;
+          flex-flow: column;
+          border: 0.2rem solid grey;
+          padding: 2rem;
+      
+      }
+    article h3 {
+        font-size: 1rem;
+        flex-grow: 3;
+      }
+      article > * {
+        margin: 0;
+        font-size: 0.9rem;
+      }
+      .subtle {
+        color: #d8d8d8cc;
+      }
+      article {
+        display: flex;
+        flex-direction: column;
+      }
+       article.soldOut img {
+        opacity: 0.5;
+      }
+
+       article.soldOut::before {
+        content: "Sold Out";
+        position: absolute;
+        background: var(--color);
+        color: var(--background-color);
+        padding: 1rem;
+      }
+       article .discounted,
+       article .price span {
+        display: none;
+      }
+      article.onSale .discounted {
+        display: flex;
+        justify-content: space-between;
+      }
+      .discounted > p {
+        margin-bottom: 0;
+      }
+      article.onSale .price span {
+        display: initial;
+      }
+      article button {
+        margin-top: auto;
+      }
+      article {
+        margin-bottom: 1rem;
+      }
+      .discounted p:last-child {
+        background: var(--off-color);
+        padding: 0.2rem;
+      }
+      .onSale p.sale{
+          background-color: coral;
+          padding: 0.3rem;
+      }
+      .smallProduct a {
+          color: darkgrey;
+      }
+
+
+      @media only screen and (max-width: 800px) {
+          .globalNav{
+              display: grid;
+              grid-template-areas: ". h1 ."
+                                    ". nav .";
+          }
+          h1{
+              grid-area: h1;
+          }
+          .gNav{
+              grid-area: nav;
+          }
+      }
